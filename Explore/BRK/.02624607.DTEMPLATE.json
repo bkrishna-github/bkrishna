@@ -1,0 +1,67 @@
+{
+  "objectInfo" : {
+    "id" : "6utFyuj7toIiQYh1ZcZucC",
+    "name" : "02624607",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "001ITU170000000000G8"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
+    "id" : "cvlA8hSrJMWjemkwKCuN0q",
+    "name" : "BK_Oracle",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "001ITU0B0000000000GQ"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "c02727279",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "7eflAFw3kvoehI3LxiVPGq",
+    "name" : "BK_Salesforce Analytics",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "001ITU0B0000000000GR"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Informatica2",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}
