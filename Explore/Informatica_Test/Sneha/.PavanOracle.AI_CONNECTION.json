@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "8HiJQCyqUDWf0ghpbwVsOU",
+    "name" : "PavanOracle",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "DDUQbgdwUiQLnzY-gt-56492949-2021-08-13T20:01:47.4Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}
