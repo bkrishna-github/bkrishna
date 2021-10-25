@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "7hD634FDXwllKd1pqzrdAK",
+    "name" : "tf_Decision_task_test",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "fQfYeJHQjATO9pH-gt-4145699-2021-06-22T14:46:43.082Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "8oe0B9pEoEXdo3fNNyVUoE",
+    "name" : "mt_Decision_task_test",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "001ITU0Z0000000001DJ"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Informatica_Test/Sneha"
+  } ]
+}

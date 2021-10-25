@@ -1,0 +1,155 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>fQfYeJHQjATO9pH-gt-4145699-2021-06-22T14:46:43.082Z::tf.xml</types1:EntryId>
+      <types1:Name>tf_Decision_task_test</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>ppolakam_use4</types1:CreatedBy>
+      <types1:CreationDate>2021-06-22T14:46:43Z</types1:CreationDate>
+      <types1:ModifiedBy>ppolakam_use4</types1:ModifiedBy>
+      <types1:ModificationDate>2021-06-22T15:45:33Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>ppolakam_use4</types1:PublishedBy>
+      <types1:PublicationDate>2021-06-22T15:45:41Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/tf.tf_Decision_task_test/tf_Decision_task_test.tf.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="tf_Decision_task_test"
+                   name="tf_Decision_task_test"
+                   overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="Data Task 1" type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:mt-Decision-task-test</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kq85qsf4" targetId="kq85qshe"/>
+               </start>
+               <eventContainer id="kq85qshe">
+                  <service id="kq85qsf3">
+                     <title>Data Task 1</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">mt_Decision_task_test</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">8oe0B9pEoEXdo3fNNyVUoE</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="mt-Decision-task-test">temp.Data Task 1</operation>
+                           <operation source="field" to="mt-Decision-task-test/inout[1]/o_Count">temp.DataTask1[1]/inout[1]/o_Count</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Data Task 1/output/Object_Name">Object Name</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Run_Id">Run Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Log_Id">Log Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Id">Task Id</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Task_Status">Task Status</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/End_Time">End Time</operation>
+                        <operation source="field" to="temp.Data Task 1/output/Error_Message">Error Message</operation>
+                        <operation source="field" to="temp.Data Task 1/inout/o_Count">o_Count</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kq85qsfp" targetId="kq85qsfo"/>
+                  <events>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="kq85qshc"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.Data Task 1/fault"
+                            id="kq85qshd"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <container id="kq85qsfo" type="exclusive">
+                  <title>Decision 1</title>
+                  <flow id="kq85qsfs">
+                     <service id="kq85qsg6">
+                        <title>Notification Task 1</title>
+                        <serviceName>emailNotificationService</serviceName>
+                        <serviceGUID/>
+                        <serviceInput>
+                           <parameter name="Email To" source="constant">sbanik@informatica.com</parameter>
+                           <parameter name="Email Cc" source="constant"/>
+                           <parameter name="Email Subject" source="constant">Success</parameter>
+                           <parameter name="Email Content Type" source="constant">text</parameter>
+                           <parameter name="Email Body" source="constant"/>
+                        </serviceInput>
+                        <serviceOutput/>
+                     </service>
+                     <link id="kq85qsft" targetId="kq85qsfo" type="containerLink"/>
+                  </flow>
+                  <flow id="kq85qsfv">
+                     <end id="kq85qsg2">
+                        <title>End 1</title>
+                     </end>
+                  </flow>
+                  <link id="kq85qsfr" targetId="kq85qsfs" type="containerLink">
+                     <condition source="formula">
+                        <function name="greater-than">
+                           <arg name="left">{$temp.DataTask1[1]/inout[1]/o_Count}</arg>
+                           <arg name="right">{8}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="kq85qsfu" targetId="kq85qsfv" type="containerLink"/>
+                  <link id="kq85qsfq" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-Decision-task-test"
+                              isByCopy="true"
+                              name="mt-Decision-task-test">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="InOut Parameters" name="inout" type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            type="reference"/>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>7hD634FDXwllKd1pqzrdAK</types1:GUID>
+      <types1:DisplayName>tf_Decision_task_test</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2021-10-25T02:09:34.214Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
