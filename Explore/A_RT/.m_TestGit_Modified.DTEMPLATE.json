@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
     "id" : "gaLL4kTXOYAiuPpcXkCYih",
-    "name" : "m_TestGit",
+    "name" : "m_TestGit_Modified",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "Testing git pull - Version 1",
+        "description" : "Testing git pull - Version 2",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
