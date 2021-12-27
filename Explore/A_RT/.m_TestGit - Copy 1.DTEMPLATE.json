@@ -17,8 +17,8 @@
       } ],
       "additionalInfo" : {
         "description" : "Testing git pull - Version 1",
-        "contentType" : null,
-        "documentState" : "VALID"
+        "contentType" : "JSON",
+        "documentState" : "INVALID"
       }
     }
   },
