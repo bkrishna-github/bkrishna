@@ -1,0 +1,97 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>GJZx1XmgaabclvA-gt-28926942-2022-01-21T12:11:16.525Z::pd.xml</types1:EntryId>
+      <types1:Name>Process9</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:Pavan_Local,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>ppolakam_na1</types1:CreatedBy>
+      <types1:CreationDate>2022-01-21T12:11:17Z</types1:CreationDate>
+      <types1:ModifiedBy>ppolakam_na1</types1:ModifiedBy>
+      <types1:ModificationDate>2022-01-31T12:10:01Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>ppolakam_na1</types1:PublishedBy>
+      <types1:PublicationDate>2022-01-31T12:10:17Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process9/Process9.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Process9"
+                  name="Process9"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:Pavan_Local,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="Input" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="Output" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <targetLocation>Pavan_Local</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kyxvtne6" targetId="kyxvtne5"/>
+               </start>
+               <assignment id="kyxvtne5">
+                  <title>Assignment to Output</title>
+                  <operation source="field" to="output.Output">input.Input</operation>
+                  <link id="kz2nfztl" targetId="kz2nfztk"/>
+               </assignment>
+               <service id="kz2nfztk">
+                  <title>Run Cloud Task</title>
+                  <serviceName>ICSExecuteTask</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Task Name" source="constant">test [MCT]</parameter>
+                     <parameter name="Wait for Task to Complete" source="constant">false</parameter>
+                     <parameter name="Fail on Cloud Task Errors" source="constant">false</parameter>
+                     <parameter name="GUID" source="constant">9yarwzOOlgsbxczLRHkd04</parameter>
+                  </serviceInput>
+                  <link id="kz2nfztm" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>29a8f770-3155-43dd-966d-baf143a0e1a3</ns1:Id>
+               <ns1:Name>test</ns1:Name>
+               <ns1:CreatedBy>ppolakam_na1</ns1:CreatedBy>
+               <ns1:CreationDate>2022-01-28T04:13:47Z</ns1:CreationDate>
+               <ns1:ModifiedBy>ppolakam_na1</ns1:ModifiedBy>
+               <ns1:ModifiedDate>2022-01-28T04:13:47Z</ns1:ModifiedDate>
+               <ns1:Data format="json">{
+	 "Input": "hi"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>hjT8UVM4e6kbF1GgSG7yW1</types1:GUID>
+      <types1:DisplayName>Process9</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2022-01-31T12:13:38.874Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
